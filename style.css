@@ -1,0 +1,371 @@
+/* GLOBAL STYLES*/
+/* lines which haven't been commented are self-explanatory or have been previously explained*/
+/* initial styles are made for mobile screens and there will be a query at the end for desktop screens */
+/* defining theme colour variables */
+:root{
+	--primary-color:#fffcf8;
+	--secondary-color:#711924;
+	--tertiary-color:#a75962;
+	--accent-color:#fec013;
+	--accent2:#559aaf;
+}
+
+/* changes default font to arial and 0s out padding and margin */
+/* border box means padding and margins are taken into an element's width */
+/* smooth scrolling allows links to scroll to the id in their href */
+/* the . identifier is used for classes */
+*{
+	font-family:Arial;
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+	scroll-behavior: smooth;
+}
+/* removes outline from a tags and makes color black */
+a{
+	text-decoration: none;
+	color:black;
+}
+/* highlighted text will have the blue accent colour and be in consolas */
+/* var() is used to access predefined color variables */
+span{
+	color:var(--accent2);
+	font-family:consolas;
+}
+
+/* container keeps elements from getting too close to the edge of the screen, improves readability */
+/* margin auto makes it centered */
+/* min() takes the smallest value out of the 2 parameters; padding will increase until it reaches 80px */
+/* vw is a percentage of viewwidth and vh is a percentage of viewheight */
+.container{
+	width:100%;
+	padding:min(10vw,80px);
+	margin:auto;
+
+}
+
+/* flexbox lines up header items horizontally */
+header{
+	display:flex;
+	/*  pushes the logo and links to opposite sides */
+	justify-content:space-between;
+	width:100%;
+	/* block is the same as styling top and bottom */
+	padding-block:10px;
+	/* centers items on the vertical axis */
+	align-items:center;
+	height:12vh;
+	background-color:var(--primary-color);
+
+}
+.logo{
+	/* sets bg image to the ucgs logo */
+	background-image:url(img/logo.png);
+	/* makes sure image doesn't spill out of container and fits without cropping*/
+	background-size:contain;
+	width:100%;
+	height:10vh;
+	/* stops bg from repeating */
+	background-repeat:no-repeat;
+	margin-left:50px;
+}
+
+/* indicates that is clickable */
+.logo:hover{
+	cursor:pointer;
+}
+
+.header-links{
+	display:flex;
+	padding:1rem;
+	/* removes bullet points */
+	list-style-type:none;
+}
+.header-links li{
+	/* rem and em are responsive measurements relative to font size */
+	padding:1rem;
+}
+.header-links a{
+	text-decoration:none;
+	color:var(--secondary-color);
+	font-family:consolas;
+	font-size:20px;
+}
+/* changes weight, color and adds a border when users hover over the header links */
+.header-links a:hover{
+	font-weight:1000;
+	color:var(--accent-color);
+	border-bottom: var(--accent2) 3px solid;
+}
+
+
+/* showcase */
+.showcase-container{
+	padding-block:15vh;
+	background-image:url(img/showcase.jpg);
+	/* sets a solid border at the top and bottom with the corresponding width and color*/
+	border-top:var(--accent-color) solid 3px;
+	border-bottom:var(--accent-color) solid 3px;
+	/* gives it an animation called drift up which will take place over 2 seconds */
+	animation:drift-up 2s;
+}
+@keyframes drift-up {
+	/* it will start with more padding at the top and transition to having less padding at the top, moving the contents of the showcase container upwards */
+	from{padding-top:17vh;}
+	to{padding-top: 15vh;}
+}
+/* centers the text, sets its color, weight (boldness), size to be 7vw with a max of 60px */
+.showcase-container h1{
+	text-align: center;
+	color:var(--secondary-color);
+	font-size: min(7vw,60px);
+	font-weight: 100;
+}
+
+/* lines boxes up horizontally using flex, spaces them out */
+.box-container{
+	display: flex;
+	justify-content: space-around;
+	width:80%;
+	margin:auto;
+	margin-top:6vh;
+}
+.action{
+	width:20vw;
+	height:10vh;
+	text-align: center;
+	/* each action box also has flex to center text horizontally and vertically */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding:2vw;
+	font-size:min(3vw,18px);
+	background-color: var(--primary-color);
+	border-radius: 10px;
+}
+.action:hover{
+	/* it will transition gradually over 0.2 seconds */
+	transition:ease-in 0.2s;
+}
+/* join button will have the brown bg and gold text */
+#join{
+	background-color: var(--secondary-color);
+	color:var(--accent-color);
+}
+
+/* when user hovers on the join button it will have the colour scheme of the other buttons */
+#join:hover{
+	background-color: var(--primary-color);
+	border:2px var(--accent-color) solid;
+	color:black;
+
+}
+
+/* the surrounding about and contact buttons will have the opposite colours to the join button */
+#about, #contact{
+	background-color: var(--primary-color);
+	border:2px var(--accent-color) solid;
+	color:black;
+	transition:ease-in 0.2s;
+}
+#about:hover, #contact:hover{
+	background-color: var(--secondary-color);
+	color:var(--accent-color);
+}
+/* general section styles */
+
+/* the h2 headings are smaller but are semantically more significant than the text below it which is why they are h2, their size will be 3vw and grow until it reaches 20px */
+.container h2{
+	color:var(--accent-color);
+	font-family:consolas;
+	font-size: min(3vw,20px);
+	font-weight: 600;
+	padding:10px;
+}
+
+/* the h3 headings hold the large dark brown text with the information, size will be 5vw and grow until it reaches 50px */
+.container h3{
+	font-size: min(5vw,50px);
+	font-weight:300;
+	color:var(--secondary-color)
+}
+
+
+/* membership section */
+.membership-section{
+	background-color:var(--primary-color);
+}
+
+/* styles for the join button in the membership section */
+#membership-join{
+	background-color: white;
+	border:var(--accent-color) 2px solid;
+	padding:1vw;
+	margin-top:4vh;
+	margin-bottom: 2vh;
+}
+#membership-join h3{
+	font-size:min(3vw,18px);
+	font-weight: 700;
+}
+#membership-join:hover{
+	background-color: var(--accent-color);
+	border: var(--secondary-color) 2px solid;
+	color:white;
+	transition: ease-in 0.2s;
+}
+
+/* events section */
+.events-section{
+	background-color: white;
+}
+.events-container{
+	/* event uses flexbox, on mobile it will be vertical */
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+.event{
+	padding:10px;
+	margin:2vh;
+	background-color: var(--primary-color);
+	border: var(--accent-color) solid 2px;
+	border-radius: 5px;
+	/* adds a shadow around the box */
+	box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+}
+
+/* when you hover over the event box, it gets bigger and the shadow gets bigger */
+.event:hover{
+	box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+	padding:12px;
+	transition:ease-in-out 0.2s;
+}
+.event h4{
+	font-size:min(3vw,25px) ;
+}
+.more{
+	font-weight:800;
+	color: var(--secondary-color);
+	padding-block:5px
+}
+
+/* news section */
+.news-section{
+	background-color: var(--primary-color);
+}
+.news-section ol li{
+	padding-block:3vh;
+}
+
+/* about section */
+.about{
+	background-image:url(img/showcase.jpg);
+}
+.about-grid{
+	/* margin will increase until it reaches 30px */
+	margin:min(5vw,30px);
+	/* displays it as a grid and centers the text and the images */
+	/* grids are vertical by default and don't interrupt with the flow of the document and, since it will be vertical on mobile, no more styles are needed*/
+	display:grid;
+	text-align: center;
+}
+.about-box{
+	padding:min(3vw,10px);
+}
+
+/* contact styles */
+.contact-section{
+	background-color:var(--primary-color);
+}
+.contact-box{
+	/* text area will have a max width of 1300 px */
+	width:min(90%,1300px);
+	margin:auto;
+	margin-block:3vh;
+	/* displays it as a block with its own row, similar to a div */
+	display: block;
+	height: min(90vw,50vh);
+	background-color: var(--primary-color);
+	padding: 3vw;
+	/* stops users from being able to resize the textarea */
+	resize: none;
+	border-radius: 30px;
+	border:2px solid var(--secondary-color);
+	font-size: min(8vw, 15px);
+}
+.contact-box:hover{
+	background-image:url(img/showcase.jpg);
+}
+.submit{
+	display: block;
+	margin: auto;
+	background-color: var(--primary-color);
+	padding:min(2vw,1rem);
+	border-radius: 10px;
+	color:var(--accent2);
+	font-size: min(3vw,20px);
+}
+
+.submit:hover{
+	background-color: var(--accent-color);
+	border: solid 2px var(--primary-color);
+	color: var(--primary-color);
+	transition: ease 0.2s;
+}
+
+/* footer styles */
+footer{
+	background-color: var(--tertiary-color);
+	color:var(--accent-color);
+	text-align: center;
+	padding:20px;
+	font-size: min(6vw,30px);
+	font-weight: 200;
+}
+footer a{
+	font-size: 10px;
+}
+/* media query for desktop screens, styles onyl apply for a view width of greater than 700px*/
+@media only screen and (min-width: 700px) {
+	.events-container{
+		/* makes the events line up in a row */
+		flex-direction:row;
+	}
+	.event{
+		width: 30vw;
+	}
+
+
+	.about-grid{
+		/* divides the grid into 6 columns of evenly spaced widths */
+		grid-template-columns: repeat(6,1fr);
+		grid-template-rows:1 fr 1fr;
+		/* adds a gap between each cell in the grid that grows until it reaches 10px */
+		gap:min(4vw,10px);
+
+	}
+
+	/* grid column has 2 arguemments, the 1st is the column to start in and the span is how many columns it will take up */
+	/* if all 6 columns of the row are filled, it will make a new row automatically */
+	.hw-help{
+		/* starts on the 1st column and takes up 2 columns (so it takes up a third of the columns) */
+		grid-column: 1/span 2;
+	}
+	.medals{
+		/* takes up the next third */
+		grid-column:3/span 2;
+	}
+	.coding{
+		/* takes up the final third of the 1st row */
+		grid-column:5/span 2;
+	}
+	.social{
+		/* since the 1st row has all its columns filled, it will go to the second row, start on the 2nd column and take up 2 columns*/
+		grid-column: 2/span 2;
+	}
+	.idea{
+		/* on the 2nd row, it will start on the 4th column and take up the 4th and 5th columns */
+		grid-column: 4/span 2;
+	}
+  }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UCGS Computing Society</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="style.css">
+  <!-- loads the js file after webpage has loaded -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  
+
+  <header class="header">
+  
+  <!-- calls the redirect function when clicked -->
+	<div class="logo" onclick="redirect('https://www.uptoncourtgrammar.org.uk/');"></div>
+	
+  <!-- defines an unordered list of links, uses flexbox for horizontal placement -->
+	<ul class="header-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="#about-section">About</a></li>
+		<li><a href ="#member">Join</a></li>
+	</ul>
+  </header>
+  
+
+  <section class="showcase-container">
+    <!-- span will be styled to add a blue highlight and change the font to consolas -->
+    <h1>Upton Court Grammar School<br><span>Computing Society</span></h1>
+
+    <!-- box-container will be styled with flexbox so buttons are lined up horizontally -->
+    <div class="box-container">
+    <!-- a tags link to the specified ids, call-to-action buttons have same class as they will be styled similarly (dimensions), ids used for specific colors -->
+    <a href="#about-section"><div class="action" id="about"><h3>Find out more</h3></div></a>
+    <a href="#member"><div class="action" id="join"><h3>Become a member</h3></div></a>
+    <a href="#contact-section"><div class="action" id="contact"><h3>Contact Us</h3></div></a>
+  </div>
+  </section>
+  
+
+  <section class="membership-section container" id="member">
+    <h2 class="membership-header">MEMBERSHIP</h2>
+    <!-- another use of the higlight span -->
+    <h3 class="membership-text">Our members always come first. We aim to provide great experiences for <span>everyone</span>.</h3>
+    <a href="membership.html">
+    <!-- another call-to-action button -->
+    <div class="action" id="membership-join"><h3>Join Now</h3></div>
+  </a>
+  </section>
+
+  <section class="events-section container">
+    <h2 class="upcoming-events">UPCOMING EVENTS</h2>
+    <h3>A look at what we have <span>coming up...</span></h3>
+
+    <!-- a flexbox container, will be horizontal on desktop and vertical on mobile -->
+    <div class="events-container">
+      <div class="event">
+        <h4 class="event1">event1!!!</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, adipisci pariatur esse eveniet nam ipsam voluptas corporis veniam quis eligendi quasi alias veritatis suscipit tenetur quos totam! Expedita, architecto? Minima voluptate, ratione quos soluta quisquam culpa iusto numquam, esse sint sit, suscipit distinctio praesentium dolores? Animi repellat iusto sit itaque?</p>
+        <!-- onclick calls notfound() and alerts the user -->
+        <a href=" "onclick="notfound()"><p class="more">Find out more</p></a>
+      </div>
+      <div class="event">
+        <h4 class="event2">event2!!!</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repellendus nostrum unde quisquam atque ex deleniti iure veritatis quidem accusantium.s</p>
+        <a href=" " onclick="notfound()"><p class="more">Find out more</p></a>
+      </div>
+      <div class="event">
+        <h4 class="event3">event3!!!</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repellendus nostrum unde quisquam atque ex deleniti iure veritatis quidem accusantium.s</p>
+        <a href=" " onclick="notfound()"><p class="more">Find out more</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-section container">
+    <h2 class="news">NEWS</h2>
+    <h3 class="news-header">The <span>latest</span> in our society</h3>
+    <div class="news-container">
+      <!-- ordered list of news stories with highlighted headlines -->
+      <ol>
+      <li><div class="news-story">
+        <h4><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, maxime.</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quia saepe beatae voluptate culpa recusandae facilis tenetur aliquid consequatur veritatis nisi maxime, officia ipsum vero, minus obcaecati atque doloribus magni impedit qui laborum! Excepturi architecto ipsam harum? Porro nulla nemo optio, repellendus expedita, et autem dolorem itaque minus illum non aperiam. Natus sapiente est totam at illo voluptatem sunt quis, soluta nobis quasi explicabo temporibus aliquam culpa assumenda placeat eius. Ab dignissimos cumque repudiandae, repellendus dicta debitis inventore deserunt deleniti.</p>
+      </div></li>
+      <li>
+        <div class="news-story">
+          <h4><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, maxime.</span></h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae eos vitae adipisci laudantium! Vitae ea excepturi maxime, repellat perferendis error laboriosam dolor at aspernatur. Numquam alias dolor enim aspernatur.</p>
+        </div>
+      </li>
+      <li>
+        <div class="news-story">
+          <h4><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, maxime.</span></h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quasi, temporibus eaque delectus deleniti perferendis dignissimos error ea excepturi velit quisquam aliquid ducimus eum quidem. Impedit reprehenderit ad nemo quibusdam praesentium? Et tenetur quo distinctio. Quam error nihil adipisci ea at quia. Blanditiis cum, quo ea qui reprehenderit sint architecto voluptatibus repudiandae neque unde? Quibusdam distinctio exercitationem totam impedit omnis!</p>
+        </div>
+      </li>
+      <li>
+        <div class="news-story">
+          <h4><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, maxime.</span></h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas odio, debitis adipisci doloribus, quae, in nam amet officia tenetur illum repellendus beatae quia asperiores? Esse, molestias? Quos consequuntur atque adipisci magnam iste qui debitis eos, sapiente tempore aliquid ducimus eligendi..</p>
+        </div>
+      </li>
+    </ol>
+    </div>
+  </section>
+
+  <section class="about container" id="about-section">
+    <h2 class="about-header">What we do</h2>
+    <h3>We offer a <span>variety</span> of learning opportunites</h3>
+
+    <!-- css grid will be used -->
+    <div class="about-grid">
+      <!-- each div will contain one aspect of compsoc and a representative icon -->
+      <div class="about-box hw-help">
+        <!-- img tags that link within the img folder, alt tags improve accessibility for e-readers and replace the image if it doesn't load -->
+        <img src="img/mortarboard.png" alt="mortarboard" height="80px">
+        <h4><span>Homework Help</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellendus esse incidunt odit delectus necessitatibus aperiam commodi illum odio provident.</p>
+      </div>
+      <div class="about-box medals">
+        <img src="img/medals.png " height="80px"alt="medal" srcset="">
+        <h4><span>Competitions</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellendus esse incidunt odit delectus necessitatibus aperiam commodi illum odio provident.</p>
+      </div>
+      <div class="about-box coding">
+        <img src="img/coding.png" height="80px" alt="coding">
+        <h4><span>Learn how to code</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellendus esse incidunt odit delectus necessitatibus aperiam commodi illum odio provident.</p>
+      </div>
+      <div class="about-box social">
+        <img src="img/people.png" height="80px" alt="people">
+        <h4><span>Social Events</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellendus esse incidunt odit delectus necessitatibus aperiam commodi illum odio provident.</p>
+      </div>
+      <div class="about-box idea">
+        <img src="img/idea.png" height="80px" alt="light bulb">
+        <h4><span>Share Ideas</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellendus esse incidunt odit delectus necessitatibus aperiam commodi illum odio provident.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section container"id="contact-section">
+    <h2 class="contact-header">Contact</h2>
+    <h3>Reach out to us, any feedback is appreciated!</h3>
+    <!-- creates a form with a textarea and a submit button, sends a POST request that is handled by netlify (hosting service) -->
+    <form name="contact" method="POST" data-netlify="true">
+    <label for="text">Message:</label><textarea class="contact-box"name="text" id="" cols="30" rows="10"></textarea>
+    </label><input class="submit" type="submit">
+  </form>
+  </section>
+
+  <!-- footer attributing sources and the UCGS computing society -->
+  <footer>
+    <p>Made by the UCGS CompSoc♥</p>
+    <p><a href="https://www.flaticon.com/free-icons/medal" title="medal icons">Medal icons created by zky.icon - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/education" title="education icons">Education icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/api" title="api icons">Api icons created by rukanicon - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
+  </p>
+  </footer>
+  
+</body>
+</html>
